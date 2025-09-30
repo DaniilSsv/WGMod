@@ -1,4 +1,4 @@
-package com.example.WGKal;
+package com.Kaljmarik.WGKal;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

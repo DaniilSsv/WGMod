@@ -1,4 +1,4 @@
-package com.example.WGKal;
+package com.Kaljmarik.WGKal;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
