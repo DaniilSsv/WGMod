@@ -11,6 +11,6 @@ public record Player(
         Integer globalRating,
         String realm,
         String accessToken,
-        Long expiresAt
+        Instant expiresAt
 ) {}
 

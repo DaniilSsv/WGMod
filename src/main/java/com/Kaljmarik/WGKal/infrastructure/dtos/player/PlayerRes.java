@@ -10,6 +10,6 @@ public record PlayerRes(
         Integer globalRating,
         String realm,
         String accessToken,
-        Long expiresAt
+        Instant expiresAt
 ) {
 }

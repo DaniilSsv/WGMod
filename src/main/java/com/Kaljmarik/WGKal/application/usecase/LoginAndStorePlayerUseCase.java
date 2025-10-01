@@ -1,5 +1,6 @@
 package com.Kaljmarik.WGKal.application.usecase;
 
+import com.Kaljmarik.WGKal.application.util.TimeUtil;
 import com.Kaljmarik.WGKal.domain.model.Player;
 import com.Kaljmarik.WGKal.domain.ports.PlayerRepository;
 import com.Kaljmarik.WGKal.infrastructure.dtos.player.PlayerRes;
@@ -16,21 +17,20 @@ public class LoginAndStorePlayerUseCase {
         this.playerRepository = playerRepository;
     }
 
-    public PlayerRes execute(String accessToken, Long accountId, String nickname, Long expiresAt) {
-        // Look for existing player
+    public PlayerRes execute(String accessToken, Long accountId, String nickname, Long expiresAtUnix) {
         Player existing = playerRepository.findByWotAccountId(accountId).orElse(null);
 
         Player playerToSave = (existing != null)
                 ? new Player(
-                existing.id(),         // preserve ID
+                existing.id(),
                 accountId,
-                nickname,              // update nickname
+                nickname,
                 existing.createdAt(),
                 existing.lastBattleTime(),
                 existing.globalRating(),
                 existing.realm(),
-                accessToken,           // update token
-                expiresAt              // update expires
+                accessToken,
+                TimeUtil.fromUnix(expiresAtUnix)
         )
                 : new Player(
                 null,                  // new player
@@ -41,7 +41,7 @@ public class LoginAndStorePlayerUseCase {
                 null,
                 "eu",
                 accessToken,
-                expiresAt
+                TimeUtil.fromUnix(expiresAtUnix)
         );
 
         Player savedPlayer = playerRepository.save(playerToSave);

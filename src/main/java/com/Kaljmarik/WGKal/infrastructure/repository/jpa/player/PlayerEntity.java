@@ -38,12 +38,12 @@ public class PlayerEntity {
     private String accessToken;
 
     @Column(name = "expires_at", nullable = false)
-    private Long expiresAt;
+    private Instant expiresAt;
 
     public PlayerEntity() {}
 
     public PlayerEntity(Long id, Long wotAccountId, String nickname, Instant createdAt,
-                        Instant lastBattleTime, Integer globalRating, String realm, Long expiresAt, String accessToken) {
+                        Instant lastBattleTime, Integer globalRating, String realm, Instant expiresAt, String accessToken) {
         this.id = id;
         this.wotAccountId = wotAccountId;
         this.nickname = nickname;
