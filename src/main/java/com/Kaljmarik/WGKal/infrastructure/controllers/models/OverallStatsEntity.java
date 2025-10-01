@@ -53,23 +53,38 @@ public class OverallStatsEntity {
     @Column(name = "survived_battles")
     private int survivedBattles;
 
-    @Column(name = "damage_dealt")
-    private int damageDealt;
-
     @Column
     private int frags;
 
-    @Column
-    private int shots;
+    @Column(name = "damage_dealt")
+    private int damageDealt;
 
-    @Column
-    private int spotted;
+    @Column(name = "avg_damage_blocked")
+    private double avarageDamageBlocked;
 
-    @Column(name = "capture_points")
-    private int capturePoints;
+    @Column(name = "avg_damage_assisted")
+    private double avarageDamageAssisted;
 
-    @Column(name = "dropped_capture_points")
-    private int droppedCapturePoints;
+    @Column(name = "avg_battle_experience")
+    private double avarageBattleExperience;
+
+    @Column(name = "max_damage_tank_id")
+    private int maxDamageTankId;
+
+    @Column(name = "max_damage")
+    private int maxDamage;
+
+    @Column(name = "max_xp_tank_id")
+    private int maxXpTankId;
+
+    @Column(name = "max_xp")
+    private int maxXp;
+
+    @Column(name = "max_frags_tank_id")
+    private int maxFragsTankId;
+
+    @Column(name = "max_frags")
+    private int maxFrags;
 
     @Column(name = "updated_at")
     @UpdateTimestamp

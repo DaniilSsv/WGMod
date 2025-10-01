@@ -22,12 +22,17 @@ public class OverallStatsMapper {
                 entity.getLosses(),
                 entity.getDraws(),
                 entity.getSurvivedBattles(),
-                entity.getDamageDealt(),
                 entity.getFrags(),
-                entity.getShots(),
-                entity.getSpotted(),
-                entity.getCapturePoints(),
-                entity.getDroppedCapturePoints(),
+                entity.getDamageDealt(),
+                entity.getAvarageDamageBlocked(),
+                entity.getAvarageDamageAssisted(),
+                entity.getAvarageBattleExperience(),
+                entity.getMaxDamageTankId(),
+                entity.getMaxDamage(),
+                entity.getMaxXpTankId(),
+                entity.getMaxXp(),
+                entity.getMaxFragsTankId(),
+                entity.getMaxFrags(),
                 entity.getUpdatedAt()
         );
     }
@@ -48,12 +53,17 @@ public class OverallStatsMapper {
                 .losses(overallStats.losses())
                 .draws(overallStats.draws())
                 .survivedBattles(overallStats.survivedBattles())
-                .damageDealt(overallStats.damageDealt())
                 .frags(overallStats.frags())
-                .shots(overallStats.shots())
-                .spotted(overallStats.spotted())
-                .capturePoints(overallStats.capturePoints())
-                .droppedCapturePoints(overallStats.droppedCapturePoints())
+                .damageDealt(overallStats.damageDealt())
+                .avarageDamageBlocked(overallStats.avarageDamageBlocked())
+                .avarageDamageAssisted(overallStats.avarageDamageAssisted())
+                .avarageBattleExperience(overallStats.avarageBattleExperience())
+                .maxDamageTankId(overallStats.maxDamageTankId())
+                .maxDamage(overallStats.maxDamage())
+                .maxXpTankId(overallStats.maxXpTankId())
+                .maxXp(overallStats.maxXp())
+                .maxFragsTankId(overallStats.maxFragsTankId())
+                .maxFrags(overallStats.maxFrags())
                 .updatedAt(overallStats.updatedAt())
                 .build();
     }

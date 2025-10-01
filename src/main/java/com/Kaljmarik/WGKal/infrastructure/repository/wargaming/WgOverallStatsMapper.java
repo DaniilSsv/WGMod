@@ -34,17 +34,28 @@ public class WgOverallStatsMapper {
                     createdAt,
                     globalRating,
                     lastBattleTime,
+
                     ((Number) all.getOrDefault("battles", 0)).intValue(),
                     ((Number) all.getOrDefault("wins", 0)).intValue(),
                     ((Number) all.getOrDefault("losses", 0)).intValue(),
                     ((Number) all.getOrDefault("draws", 0)).intValue(),
                     ((Number) all.getOrDefault("survived_battles", 0)).intValue(),
-                    ((Number) all.getOrDefault("damage_dealt", 0)).intValue(),
                     ((Number) all.getOrDefault("frags", 0)).intValue(),
-                    ((Number) all.getOrDefault("shots", 0)).intValue(),
-                    ((Number) all.getOrDefault("spotted", 0)).intValue(),
-                    ((Number) all.getOrDefault("capture_points", 0)).intValue(),
-                    ((Number) all.getOrDefault("dropped_capture_points", 0)).intValue(),
+                    ((Number) all.getOrDefault("damage_dealt", 0)).intValue(),
+
+                    ((Number) all.getOrDefault("avg_damage_blocked", 0)).doubleValue(),
+                    ((Number) all.getOrDefault("avg_damage_assisted", 0)).doubleValue(),
+                    ((Number) all.getOrDefault("battle_avg_xp", 0)).doubleValue(),
+
+                    ((Number) all.getOrDefault("max_damage_tank_id", 0)).intValue(),
+                    ((Number) all.getOrDefault("max_damage", 0)).intValue(),
+
+                    ((Number) all.getOrDefault("max_xp_tank_id", 0)).intValue(),
+                    ((Number) all.getOrDefault("max_xp", 0)).intValue(),
+
+                    ((Number) all.getOrDefault("max_frags_tank_id", 0)).intValue(),
+                    ((Number) all.getOrDefault("max_frags", 0)).intValue(),
+
                     Instant.now()
             );
         } catch (Exception e) {

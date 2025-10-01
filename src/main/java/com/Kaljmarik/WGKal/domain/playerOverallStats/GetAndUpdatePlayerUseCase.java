@@ -47,12 +47,7 @@ public class GetAndUpdatePlayerUseCase {
 
         return new FullPlayerRes(
                 player,
-                fetchedOverallStats.battles(),
-                fetchedOverallStats.wins(),
-                fetchedOverallStats.losses(),
-                fetchedOverallStats.survivedBattles(),
-                fetchedOverallStats.damageDealt(),
-                fetchedOverallStats.frags(),
+                fetchedOverallStats,
                 ratios.winRatio(),
                 ratios.kdRatio(),
                 ratios.damageRatio()
@@ -74,12 +69,17 @@ public class GetAndUpdatePlayerUseCase {
                     fetchedOverallStats.losses(),
                     fetchedOverallStats.draws(),
                     fetchedOverallStats.survivedBattles(),
-                    fetchedOverallStats.damageDealt(),
                     fetchedOverallStats.frags(),
-                    fetchedOverallStats.shots(),
-                    fetchedOverallStats.spotted(),
-                    fetchedOverallStats.capturePoints(),
-                    fetchedOverallStats.droppedCapturePoints(),
+                    fetchedOverallStats.damageDealt(),
+                    fetchedOverallStats.avarageDamageBlocked(),
+                    fetchedOverallStats.avarageDamageAssisted(),
+                    fetchedOverallStats.avarageBattleExperience(),
+                    fetchedOverallStats.maxDamageTankId(),
+                    fetchedOverallStats.maxDamage(),
+                    fetchedOverallStats.maxXpTankId(),
+                    fetchedOverallStats.maxXp(),
+                    fetchedOverallStats.maxFragsTankId(),
+                    fetchedOverallStats.maxFrags(),
                     fetchedOverallStats.updatedAt()
             );
         } else {

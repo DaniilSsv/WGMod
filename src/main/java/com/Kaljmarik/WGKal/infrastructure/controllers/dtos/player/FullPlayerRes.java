@@ -1,15 +1,11 @@
 package com.Kaljmarik.WGKal.infrastructure.controllers.dtos.player;
 
 import com.Kaljmarik.WGKal.domain.player.Player;
+import com.Kaljmarik.WGKal.domain.playerOverallStats.OverallStats;
 
 public record FullPlayerRes(
         Player player,
-        long battles,
-        long wins,
-        long losses,
-        long survivedBattles,
-        long damageDealt,
-        long frags,
+        OverallStats overallStats,
         double winRatio,
         double kdRatio,
         double damageRatio

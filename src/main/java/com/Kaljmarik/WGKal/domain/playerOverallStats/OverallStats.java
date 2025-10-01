@@ -12,17 +12,28 @@ public record OverallStats(
         Instant createdAt,
         int globalRating,
         Instant lastBattleTime,
+
         int battles,
         int wins,
         int losses,
         int draws,
         int survivedBattles,
-        int damageDealt,
         int frags,
-        int shots,
-        int spotted,
-        int capturePoints,
-        int droppedCapturePoints,
+        int damageDealt,
+
+        double avarageDamageBlocked,
+        double avarageDamageAssisted,
+        double avarageBattleExperience,
+
+        int maxDamageTankId,
+        int maxDamage,
+
+        int maxXpTankId,
+        int maxXp,
+
+        int maxFragsTankId,
+        int maxFrags,
+
         Instant updatedAt
 ) {
 }
