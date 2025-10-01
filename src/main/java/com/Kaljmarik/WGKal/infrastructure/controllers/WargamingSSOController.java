@@ -1,7 +1,7 @@
 package com.Kaljmarik.WGKal.infrastructure.controllers;
 
-import com.Kaljmarik.WGKal.application.usecase.LoginAndStorePlayerUseCase;
-import com.Kaljmarik.WGKal.infrastructure.dtos.player.PlayerRes;
+import com.Kaljmarik.WGKal.domain.wargaming.LoginAndStorePlayerUseCase;
+import com.Kaljmarik.WGKal.infrastructure.controllers.dtos.player.PlayerRes;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

@@ -1,7 +1,7 @@
 package com.Kaljmarik.WGKal.infrastructure.controllers;
 
-import com.Kaljmarik.WGKal.application.usecase.RetrieveAndStorePlayerUseCase;
-import com.Kaljmarik.WGKal.infrastructure.dtos.player.FullPlayerRes;
+import com.Kaljmarik.WGKal.domain.playerOverallStats.GetAndUpdatePlayerUseCase;
+import com.Kaljmarik.WGKal.infrastructure.controllers.dtos.player.FullPlayerRes;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/players")
 public class PlayerController {
 
-    private final RetrieveAndStorePlayerUseCase retrieveUseCase;
+    private final GetAndUpdatePlayerUseCase retrieveUseCase;
 
     @GetMapping("/fetch")
     public FullPlayerRes fetchPlayer(@RequestParam Long wotAccountId) {
